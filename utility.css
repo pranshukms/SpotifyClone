@@ -1,0 +1,55 @@
+.rounded1{
+    border-radius: 7px;
+}
+.rounded2{
+    border-radius: 47px;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.invert{
+    filter: invert(1);
+}
+.bg-gray{
+    background-color: #121212;
+    color: white;
+}   
+.bg-black{
+    background-color: black;
+    color: white;
+}
+
+.p-1{
+    padding: 10px;
+}
+
+.p-2{
+    padding: 20px;
+}
+.m-1{
+    margin: 10px;
+}
+
+/* SCROLL BAR*/
+::-webkit-scrollbar {
+    width: 17px;
+}
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    /* border-radius: 6px; */
+}
+::-webkit-scrollbar-thumb {
+    background-color: #444;
+    /* border-radius: 6px; */
+    border: 2px solid #1a1a1a;
+}
+
