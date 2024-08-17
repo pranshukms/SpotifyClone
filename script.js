@@ -45,6 +45,7 @@ const playMusic = (track, pause=false)=>{
         play.src="pause.svg"
     }
     document.querySelector(".songinfo").innerHTML= track 
+    document.querySelector("title").innerHTML = "Spotify – " +  track
     document.querySelector(".songtime").innerHTML= "00:00 / 00:00"
 }
 
@@ -109,6 +110,17 @@ async function main() {
     currentSong.addEventListener("timeupdate", ()=>{
         document.querySelector(".songtime").innerHTML= formatTime(currentSong.currentTime) +"/"+ formatTime(currentSong.duration)
         document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%"
+    })
+
+    //listen for slider seek
+    document.querySelector(".seekbar").addEventListener("click", e=>{
+        // console.log(e.target, e.offsetX);  //target html element, pixelin x dir  
+          
+        // console.log(e.target.getBoundingClientRect().width, e.offsetX);  
+        //getboundingclient gives position info, so extracting width from that info which gives max x-offset then finding percent of current clicks x-offset
+        let percent= (e.offsetX/e.target.getBoundingClientRect().width)*100;
+        document.querySelector(".circle").style.left = percent + "%"
+        currentSong.currentTime = ((currentSong.duration)*percent)/100
     })
 
 }

@@ -12,11 +12,13 @@ body{
     width: 23vw;
     height: 88vh;
     gap: 4px;
+    overflow: auto;
 }
 .right{
     padding-top: 10px;
     width: 77vw;
-    height: 88vh;
+    height: 86vh;
+    overflow: auto;
 }
 .playbar{
     width: 100%;
@@ -43,8 +45,9 @@ body{
 
 .library{
     margin-top: 10px;
-    height: 56vh;
+    height: 61%;
     position: relative;
+    overflow: auto;
 }
 .heading{
     gap:20px;
@@ -54,7 +57,7 @@ body{
 }
 .song-list{
     margin-top: 10px;
-    height: 354px;
+    /* height: 354px; */
     overflow: auto;
 }
 .song-list ul{
@@ -190,6 +193,9 @@ body{
     height: 26px;
 }
 
+
+ /*--------------------  playbar ----------------------------------------  */
+
 .controls{
     justify-content: space-around;
     /* gap: 20px; */
@@ -197,7 +203,11 @@ body{
 .controls img:hover{
     cursor: pointer;
 }
+.controls img{
+    padding: 10px 10px 0px 10px;
+}
 .controlbtn{
+    /* padding-bottom: 5px; */
     margin: auto;
 }
 .seekbar{
@@ -206,6 +216,7 @@ body{
     background-color: #252525;
     height: 4px;
     width: 40vw;
+    cursor: pointer;
     margin: 0 30vw;
     border-radius: 4px;
 }
@@ -217,6 +228,7 @@ body{
     height: 8px;
     width: 8px;
     left: 0%;
+    cursor: pointer;
 }
 .songtime{
     padding: 0 12px;
