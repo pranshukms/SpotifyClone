@@ -46,7 +46,8 @@ const playMusic = (track, pause=false)=>{
     }
     document.querySelector(".songinfo").innerHTML= track 
     document.querySelector("title").innerHTML = "Spotify – " +  track
-    document.querySelector(".songtime").innerHTML= "00:00 / 00:00"
+    document.querySelector(".songtime").innerHTML= "00:00"
+    document.querySelector(".songcurrent").innerHTML= "00:00"
 }
 
 // ---------------------------------------------------------------------------------------------------
@@ -108,7 +109,8 @@ async function main() {
 
     //listen for timeupdate
     currentSong.addEventListener("timeupdate", ()=>{
-        document.querySelector(".songtime").innerHTML= formatTime(currentSong.currentTime) +"/"+ formatTime(currentSong.duration)
+        document.querySelector(".songcurrent").innerHTML= formatTime(currentSong.currentTime)
+        document.querySelector(".songtime").innerHTML= formatTime(currentSong.duration)
         document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%"
     })
 

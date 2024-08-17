@@ -197,27 +197,30 @@ body{
  /*--------------------  playbar ----------------------------------------  */
 
 .controls{
-    justify-content: space-around;
+    justify-content: center;
+    position: relative;
     /* gap: 20px; */
 }
-.controls img:hover{
+.controlbtn img{
+    padding: 10px 10px 10px 10px;
+}
+.controlbtn img:hover{
     cursor: pointer;
 }
-.controls img{
-    padding: 10px 10px 0px 10px;
-}
-.controlbtn{
-    /* padding-bottom: 5px; */
-    margin: auto;
-}
+/* .controlbtn{
+    padding-bottom: 5px;
+    margin-left: 400px;
+} */
+
+
 .seekbar{
-    position: absolute;
-    bottom: 25px;
+    /* position: absolute; */
+    /* bottom: 30px; */
     background-color: #252525;
     height: 4px;
     width: 40vw;
     cursor: pointer;
-    margin: 0 30vw;
+    /* margin: 0 33vw; */
     border-radius: 4px;
 }
 .circle{
@@ -230,12 +233,15 @@ body{
     left: 0%;
     cursor: pointer;
 }
-.songtime{
-    padding: 0 12px;
-    font-size: 14px;
+.songtime, .songcurrent{
+    margin: 4px;
+    font-size: 11px;
     /* position: absolute;
     right: 45vw; */
 }
 .songinfo{
     padding: 0 12px;
+    margin-right: 90px;
+    position: absolute;
+    left: 0;
 }
