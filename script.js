@@ -36,11 +36,14 @@ async function getSongs(){
 
 // --------------------------------------------------------------------------------------------------
 
-const playMusic = (track)=>{
+const playMusic = (track, pause=false)=>{
     // let audio= new Audio("/songs/" +track)
     currentSong.src = "/songs/"+ track
-    currentSong.play()
-    play.src="pause.svg"
+    if (!pause){
+
+        currentSong.play()
+        play.src="pause.svg"
+    }
     document.querySelector(".songinfo").innerHTML= track 
     document.querySelector(".songtime").innerHTML= "00:00 / 00:00"
 }
@@ -50,11 +53,11 @@ const playMusic = (track)=>{
 async function main() {
     //Get the list of all the songs
     let songs = await getSongs()
-    // console.log(songs)
-
-
-
     
+    //set a bydefault top song
+    playMusic(songs[0], true)
+
+
     thmb = ["https://images-na.ssl-images-amazon.com/images/M/MV5BMDk3ZjQ3NDQtM2ZjNy00ZWVlLWFlMGItMjlhMjQ1OTc4ZTFiXkEyXkFqcGdeQXVyNTE0MDc0NTM@._V1_.jpg","https://i.pinimg.com/originals/96/cf/b8/96cfb876dbee86c4ca3b03141dbb0c36.jpg","https://stat5.bollywoodhungama.in/wp-content/uploads/2018/04/Kabir-Singh-12.jpg","https://wallpapers.oneindia.com/ph-1024x768/2012/11/135418816517327.jpg","https://files.prokerala.com/movies/pics/800/anjaana-anjaani-7519.jpg"]
 
 
@@ -105,6 +108,7 @@ async function main() {
     //listen for timeupdate
     currentSong.addEventListener("timeupdate", ()=>{
         document.querySelector(".songtime").innerHTML= formatTime(currentSong.currentTime) +"/"+ formatTime(currentSong.duration)
+        document.querySelector(".circle").style.left = (currentSong.currentTime / currentSong.duration) * 100 + "%"
     })
 
 }
