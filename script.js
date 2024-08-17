@@ -2,6 +2,15 @@ console.log('evening fellas');
 
 let currentSong= new Audio();
  
+function formatTime(seconds) {
+    // Remove milliseconds by flooring the total seconds
+    const totalSeconds = Math.floor(seconds);
+    const minutes = Math.floor(totalSeconds / 60);
+    const remainingSeconds = totalSeconds % 60;
+    // Ensure seconds are always two digits
+    const formattedSeconds = remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds;
+    return `${minutes}:${formattedSeconds}`;
+}
 
 async function getSongs(){
 
@@ -25,12 +34,18 @@ async function getSongs(){
     
 } 
 
+// --------------------------------------------------------------------------------------------------
+
 const playMusic = (track)=>{
     // let audio= new Audio("/songs/" +track)
     currentSong.src = "/songs/"+ track
     currentSong.play()
     play.src="pause.svg"
+    document.querySelector(".songinfo").innerHTML= track 
+    document.querySelector(".songtime").innerHTML= "00:00 / 00:00"
 }
+
+// ---------------------------------------------------------------------------------------------------
 
 async function main() {
     //Get the list of all the songs
@@ -85,6 +100,11 @@ async function main() {
             currentSong.pause()
             play.src = "play.svg"
         }
+    })
+
+    //listen for timeupdate
+    currentSong.addEventListener("timeupdate", ()=>{
+        document.querySelector(".songtime").innerHTML= formatTime(currentSong.currentTime) +"/"+ formatTime(currentSong.duration)
     })
 
 }

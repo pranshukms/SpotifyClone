@@ -190,8 +190,15 @@ body{
     height: 26px;
 }
 
-.controls img, svg:hover{
+.controls{
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+.controls img:hover{
     cursor: pointer;
+}
+.controlbtn{
+    padding-left: 60px;
 }
 .seekbar{
     position: absolute;
@@ -210,4 +217,13 @@ body{
     height: 8px;
     width: 8px;
     left: 0%;
+}
+.songtime{
+    padding: 0 62px;
+    font-size: 10px;
+    position: absolute;
+    right: 45vw;
+}
+.songinfo{
+    padding: 0 12px;
 }
