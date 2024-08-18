@@ -15,7 +15,10 @@
 
         <div class="left p-1">
             <div class="home bg-gray rounded1 p-2">
-                <img class="invert" src="logo.svg" alt="">
+                <div class="side flex">
+                    <img src="hamburger.svg" alt="" class="close invert">
+                    <img class="invert" src="logo.svg" alt="">
+                </div>
                 <ul>
                     <li><img class="invert" src="home.svg" alt="home">Home</li>
                     <li><img class="invert" src="search.svg" alt="search">Search</li>
@@ -24,7 +27,7 @@
             <div class="library bg-gray rounded1 p-2">
                 <div class="heading flex align-center">
                     <img class="invert" src="playlist.svg" alt="playlist">
-                    <h4>Your Playlists</h4>
+                    <h4>Your Songs</h4>
                 </div>
                 <!-- <div class="footer flex">
                     <div>
@@ -70,9 +73,11 @@
         <div class="right rounded1">
 
             <div class="header flex">
-                <div class="nav">
-                    <img class="invert rounded2" src="left.svg" alt="left">
-                    <img class="invert rounded2" src="right.svg" alt="right">
+                <div class="nav flex">
+                    <img class="invert hamburger" width="35px" src="hamburger.svg" alt="">
+                    <img class="invert lft rounded2" src="left.svg" alt="left">
+                    <img class="invert ryt rounded2" src="right.svg" alt="right">
+                    <img class="invert lgo" width="88px" src="logo.svg" alt="logo">
                 </div>
                 <div class="buttons">
                     <button class="signup rounded2">Sign Up</button>
@@ -82,7 +87,8 @@
             <div class="spotifyPlaylists rounded1">
                 <h1>Spotify Playlists</h1>
                 <div class="cardContainer flex m-1">
-                    <div class="card p-1 bg-gray rounded1">
+                    
+                    <div data-folder="basic" class="card p-1 bg-gray rounded1">
                         <div class="circle-container">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
@@ -91,9 +97,22 @@
                                     stroke-linejoin="round"></path>
                             </svg>
                         </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
+                        <img src="https://i.pinimg.com/736x/69/1d/36/691d36a9964e2f85d69ce74ef4e3b032.jpg" alt="img">
+                        <h3>Love Songs</h3>
+                        <p>Various Artists</p>
+                    </div>
+                    <div data-folder="fun" class="card p-1 bg-gray rounded1">
+                        <div class="circle-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
+                                color="#000000">
+                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZYjb3O3Y2qGjLfhTDFCuvyXmgTr-ZV9hqIg&s" alt="img">
+                        <h3>Fun Songs</h3>
+                        <p>Various Artists</p>
                     </div>
                     <div class="card p-1 bg-gray rounded1">
                         <div class="circle-container">
@@ -108,201 +127,8 @@
                         <h3>albumName</h3>
                         <p>Artists</p>
                     </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
-                    <div class="card p-1 bg-gray rounded1">
-                        <div class="circle-container">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="black" class="injected-svg" xmlns:xlink="http://www.w3.org/1999/xlink" role="img"
-                                color="#000000">
-                                <path d="M5 20V4L19 12L5 20Z" stroke="#000000" stroke-width="1.5"
-                                    stroke-linejoin="round"></path>
-                            </svg>
-                        </div>
-                        <img src="https://i.scdn.co/image/ab67616d00001e021e63de6489803c2b39e7f8e5" alt="img">
-                        <h3>albumName</h3>
-                        <p>Artists</p>
-                    </div>
+                    
+                    
                 </div>
             </div>
 
@@ -313,9 +139,9 @@
         <div class="songinfo"></div>
         <div class="controls flex align-center">
             <div class="controlbtn flex align-center justify-center">
-                <img id="previous" class="invert" src="rewind.svg" alt="">
-                <img id="play" class="invert" src="play.svg" alt="">
-                <img id="next" class="invert" src="forward.svg" alt="">
+                <img width="26px" id="previous" class="invert" src="rewind.svg" alt="">
+                <img width="26px" id="play" class="invert" src="play.svg" alt="">
+                <img width="26px" id="next" class="invert" src="forward.svg" alt="">
             </div>
         </div>
         
@@ -325,6 +151,12 @@
                 <div class="circle"></div>
             </div> 
             <div class="songtime"></div>
+        </div>
+        <div class="volume">
+            <img id="volico" class="invert" width="20" src="lowvol.svg" alt="">
+            <div class="volbar">
+                <input class="range" type="range">
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
