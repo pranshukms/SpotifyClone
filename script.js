@@ -188,12 +188,10 @@ async function main() {
 
   //listen for timeupdate------------------------------------------------------------------------------------
   currentSong.addEventListener("timeupdate", () => {
-    document.querySelector(".songcurrent").innerHTML = formatTime(
-      currentSong.currentTime
-    );
-    document.querySelector(".songtime").innerHTML = formatTime(
-      currentSong.duration
-    );
+    document.querySelector(".songcurrent").innerHTML = formatTime(currentSong.currentTime);
+
+    document.querySelector(".songtime").innerHTML = formatTime(currentSong.duration);
+    
     document.querySelector(".circle").style.left =
       (currentSong.currentTime / currentSong.duration) * 100 + "%";
   });
